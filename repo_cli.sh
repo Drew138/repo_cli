@@ -5,10 +5,10 @@ LANGUAGE=${2:-unassigned}
 function parseCommand() {
 case $1 in 
     --py | --python)
-        pipenv install
+        pipenv install && touch .gitignore && touch README.md
         ;;
     --js | --javascript)
-        npm init -y
+        npm init -y && touch .gitignore && touch README.md
         ;;
     --ts | --typescript)
         npm init -y && npm install --save-dev typescript
@@ -27,14 +27,6 @@ then
 fi
 git init
 parseCommand $LANGUAGE
-if ! [ -e ".gitignore" ];
-then
-    touch .gitignore
-fi
-if ! [ -e "README.md" ];
-then
-    touch README.md
-fi
 git add . && git commit -m "First Commit"
 
 # https://gist.github.com/bradtraversy/ac3b1136fc7d739a788ad1e42a78b610
