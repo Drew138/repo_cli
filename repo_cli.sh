@@ -29,4 +29,10 @@ git init
 parseCommand $LANGUAGE
 git add . && git commit -m "First Commit"
 
+gh repo create $FOLDER --public
+
+# git remote add origin https://github.com:Drew138/$FOLDER.git
+
+git push origin master
+
 # https://gist.github.com/bradtraversy/ac3b1136fc7d739a788ad1e42a78b610
