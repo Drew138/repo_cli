@@ -34,5 +34,5 @@ gh repo create $FOLDER --public
 # git remote add origin https://github.com:Drew138/$FOLDER.git
 
 git push origin master
-
+#initrepo command
 # https://gist.github.com/bradtraversy/ac3b1136fc7d739a788ad1e42a78b610
