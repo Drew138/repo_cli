@@ -13,7 +13,7 @@ case $1 in
     --ts | --typescript)
         npm init -y && npm install --save-dev typescript
         ;;
-    --react | --React) 
+    --react | --React | --jsx) 
         npx create-react-app .
         ;;
     --tsx)
